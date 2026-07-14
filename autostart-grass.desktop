@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Grass Desktop
+Exec=grass
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Comment=Start Grass Desktop Node

@@ -1,0 +1,9 @@
+# Local compose overrides (may contain real passwords)
+docker-compose.yml
+
+# Editor / OS
+.DS_Store
+*.swp
+*~
+.idea/
+.vscode/
