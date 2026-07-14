@@ -1,3 +1,5 @@
+ARG GRASS_VERSION=7.4.4
+
 FROM lscr.io/linuxserver/webtop:ubuntu-xfce
 
 LABEL maintainer="stempst0r <stempst0r@protonmail.com>"
@@ -21,8 +23,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 # Download and install latest Grass Desktop
-ARG GRASS_VERSION=7.4.4
-
 ARG GRASS_PACKAGE_URL="https://files.grass.io/file/grass-extension-upgrades/v${GRASS_VERSION}/grass-desktop_${GRASS_VERSION}_amd64.deb"
 
 RUN wget -q -O /tmp/grass.deb ${GRASS_PACKAGE_URL} && \
