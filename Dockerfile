@@ -22,10 +22,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libasound2t64 \
     && rm -rf /var/lib/apt/lists/*
 
-# Download and install latest Grass Desktop
-ARG GRASS_PACKAGE_URL="https://files.grass.io/file/grass-extension-upgrades/v${GRASS_VERSION}/grass-desktop_${GRASS_VERSION}_amd64.deb"
-
-RUN wget -q -O /tmp/grass.deb ${GRASS_PACKAGE_URL} && \
+# Download and install Grass Desktop
+RUN wget -q -O /tmp/grass.deb \
+    "https://files.grass.io/file/grass-extension-upgrades/v${GRASS_VERSION}/grass-desktop_${GRASS_VERSION}_amd64.deb" && \
     gdebi -n /tmp/grass.deb && \
     rm /tmp/grass.deb
 
