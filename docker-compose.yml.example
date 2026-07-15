@@ -1,7 +1,7 @@
 services:
   grass:
     image: stempst0r/grass-webtop:latest
-    container_name: grass-webtop-test
+    container_name: grass-webtop
     environment:
       - PUID=1000
       - PGID=1000
